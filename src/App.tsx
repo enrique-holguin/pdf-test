@@ -8,7 +8,8 @@ function App() {
     firstName: '',
     lastName: '',
     email: '',
-    linkedin: ''
+    linkedin: '',
+    experience: []
   });
 
   const handleFormSubmit = (data: typeof savedData) => {
