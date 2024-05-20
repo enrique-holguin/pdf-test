@@ -24,18 +24,25 @@ const customStyles = {
   content: {
     top: '50%',
     left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
+    right: '50%',
+    bottom: '50%',
     transform: 'translate(-50%, -50%)',
     backgroundColor: '#000',
     color: '#fff',
     padding: '20px',
     borderRadius: '8px',
-    border: 'none'
+    border: 'none',
+    width: '90vw',
+    height: '90vh',
+    maxWidth: '900px',
+    maxHeight: '90vh',
+    overflow: 'auto',
   },
   overlay: {
-    backgroundColor: 'rgba(0, 0, 0, 0.75)'
+    backgroundColor: 'rgba(0, 0, 0, 0.75)',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
   }
 };
 
