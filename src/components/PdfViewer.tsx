@@ -46,7 +46,7 @@ type Props = {
 const formatDate = (date: Date | null) => date ? new Date(date).toLocaleDateString() : 'Presente';
 
 const PdfViewer: React.FC<Props> = ({ data }) => (
-  <PDFViewer width="100%" height="600">
+  <PDFViewer width="100%" height="600" showToolbar={false}>
     <Document>
       <Page style={styles.page}>
         <View style={styles.section}>

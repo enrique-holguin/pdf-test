@@ -88,24 +88,36 @@ const Form: React.FC<Props> = ({ onSubmit, savedData }) => {
           <label htmlFor="firstName" className="block mb-1">Nombre</label>
           <input id="firstName" {...register("firstName", { required: "El nombre es requerido" })} className="border p-2 w-full"/>
           {unsavedChanges.firstName && <span className="absolute right-2 top-2 text-yellow-500">!</span>}
+          <div className="h-4">
+            {unsavedChanges.firstName && <div className="text-yellow-600">Cambios sin guardar</div>}
+          </div>
           <div className="text-red-600 h-4">{errors.firstName && <span>{errors.firstName.message}</span>}</div>
         </div>
         <div className="mb-4 relative">
           <label htmlFor="lastName" className="block mb-1">Apellidos</label>
           <input id="lastName" {...register("lastName", { required: "Los apellidos son requeridos" })} className="border p-2 w-full"/>
           {unsavedChanges.lastName && <span className="absolute right-2 top-2 text-yellow-500">!</span>}
+          <div className="h-4">
+            {unsavedChanges.lastName && <div className="text-yellow-600">Cambios sin guardar</div>}
+          </div>
           <div className="text-red-600 h-4">{errors.lastName && <span>{errors.lastName.message}</span>}</div>
         </div>
         <div className="mb-4 relative">
           <label htmlFor="email" className="block mb-1">Email</label>
           <input id="email" {...register("email", { required: "El email es requerido", pattern: { value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/, message: "El email no es válido" } })} className="border p-2 w-full"/>
           {unsavedChanges.email && <span className="absolute right-2 top-2 text-yellow-500">!</span>}
+          <div className="h-4">
+            {unsavedChanges.email && <div className="text-yellow-600">Cambios sin guardar</div>}
+          </div>
           <div className="text-red-600 h-4">{errors.email && <span>{errors.email.message}</span>}</div>
         </div>
         <div className="mb-4 relative">
           <label htmlFor="linkedin" className="block mb-1">LinkedIn</label>
           <input id="linkedin" {...register("linkedin", { required: "El perfil de LinkedIn es requerido", pattern: { value: /^https:\/\/www.linkedin.com\/.+$/, message: "El perfil de LinkedIn no es válido" } })} className="border p-2 w-full"/>
           {unsavedChanges.linkedin && <span className="absolute right-2 top-2 text-yellow-500">!</span>}
+          <div className="h-4">
+            {unsavedChanges.linkedin && <div className="text-yellow-600">Cambios sin guardar</div>}
+          </div>
           <div className="text-red-600 h-4">{errors.linkedin && <span>{errors.linkedin.message}</span>}</div>
         </div>
         {/* Experience Section */}
